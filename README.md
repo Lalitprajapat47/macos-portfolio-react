@@ -171,7 +171,7 @@ All application logic, component integration, UI customization, and project arch
 
 **Lalit Prajapat**
 
-📧 Email: your-email@example.com
+📧 Email: lp7554499@gmail.com
 
 💼 LinkedIn:
 (https://www.linkedin.com/in/lalit-prajapat-019033206/?skipRedirect=true)
