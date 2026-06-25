@@ -1,0 +1,11 @@
+.resume-window{
+    overflow: auto;
+    height: 100%;
+
+    embed{
+        height: 100%;
+        width: 100%;
+        display: block;
+        min-width: 0;
+    }
+}

@@ -1,0 +1,167 @@
+.window {
+  height: 100%;
+  background-color: #1a1a1a;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  color: rgb(168, 168, 168);
+  font-weight: 500;
+
+  .nav {
+    padding-inline: 0.75rem;
+    padding-block: 0.5rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.14);
+    // user-select: none;
+
+    .dots {
+      display: flex;
+      gap: 6px;
+
+      .dot {
+        border-radius: 50%;
+        height: 13px;
+        width: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          opacity: 0;
+          transition: opacity 0.1s ease;
+          width: 7px;
+          height: 7px;
+          flex-shrink: 0;
+        }
+      }
+
+      &:hover .dot svg {
+        opacity: 1;
+      }
+
+      .red {
+        background-color: #ff5f57;
+        cursor: pointer;
+        &:hover {
+          background-color: #e0443c;
+        }
+      }
+
+      .yellow {
+        background-color: #febc2e;
+        cursor: pointer;
+        &:hover {
+          background-color: #d9a012;
+        }
+      }
+
+      .green {
+        background-color: #28c840;
+        cursor: pointer;
+        &:hover {
+          background-color: #1da832;
+        }
+      }
+    }
+
+    .title {
+      flex: 1;
+      text-align: center;
+      font-size: 13px;
+      color: rgba(168, 168, 168, 0.8);
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .main-content {
+    height: calc(100% - 37px);
+    overflow: auto;
+    overflow-x: hidden;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
+
+/* Scrollbar — webkit */
+.window .main-content {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(200, 200, 200, 0.2) transparent;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.24);
+      background-clip: padding-box;
+    }
+
+    &:active {
+      background: rgba(255, 255, 255, 0.32);
+      background-clip: padding-box;
+    }
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}
+
+/* react-rnd resize handles — invisible but functional */
+.react-rnd .react-resizable-handle {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  &::after {
+    display: none !important;
+  }
+}
+
+.react-rnd .react-resizable-handle-n,
+.react-rnd .react-resizable-handle-s {
+  cursor: ns-resize !important;
+  width: 100% !important;
+  height: 8px !important;
+  left: 0 !important;
+}
+
+.react-rnd .react-resizable-handle-s {
+  bottom: 0 !important;
+}
+
+.react-rnd .react-resizable-handle-e,
+.react-rnd .react-resizable-handle-w {
+  cursor: ew-resize !important;
+  width: 8px !important;
+  height: 100% !important;
+  top: 0 !important;
+}
+
+.react-rnd .react-resizable-handle-e {
+  right: 0 !important;
+}
+
+.react-rnd .react-resizable-handle-ne { cursor: ne-resize !important; }
+.react-rnd .react-resizable-handle-nw { cursor: nw-resize !important; }
+.react-rnd .react-resizable-handle-se { cursor: se-resize !important; }
+.react-rnd .react-resizable-handle-sw { cursor: sw-resize !important; }
